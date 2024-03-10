@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+#  messenger:
+#    build:
+#      context: ./
+#      dockerfile: Dockerfile
+#    command: python whatsapp_messenger/messenger.py
+#    env_file:
+#      - .env
+#    networks:
+#      - app_network
+  ui:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: streamlit run ui.py
+    env_file:
+      - .env
+    ports:
+      - 8501:8501
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

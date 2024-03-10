@@ -1,0 +1,6 @@
+streamlit
+pyautogui
+keyboard
+python-dotenv
+openai~=0.28
+pypdf
